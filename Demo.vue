@@ -21,6 +21,16 @@
         />
     </BaseGroup>
 
+    <BaseGroup label='input number'>
+      <BaseInputNumber
+        v-model='inputNumber'
+        :max='100000'
+        :min='-1000'
+        int
+        class='is-valid'
+        />
+    </BaseGroup>
+
     <BaseGroup label='tel'>
       <BaseInputValidator
         v-model='telData'
@@ -44,6 +54,7 @@ import {
   BaseSelect ,
   BaseGroup  ,
   BaseInputValidator ,
+  BaseInputNumber ,
   // ButtonStyleable ,
 } from './index.js';
 
@@ -56,6 +67,7 @@ export default {
     BaseSelect ,
     BaseGroup  ,
     BaseInputValidator ,
+    BaseInputNumber ,
     // ButtonStyleable ,
     DemoButton ,
   },
@@ -64,6 +76,7 @@ export default {
     return {
       selectData : 'aaa' ,
       inputData : 'ddd' ,
+      inputNumber : null ,
       telData : '012-345-444' ,
     };
   },
