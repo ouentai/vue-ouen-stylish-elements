@@ -45,6 +45,11 @@ export default {
   computed: {
     inputDom() { return this.$refs.inputDom ; },
   },
+  watch: {
+    value() {
+      this.localValue = this.value ;
+    },
+  },
   methods: {
     formatter() {
       let str = this.localValue ;
